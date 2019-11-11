@@ -13,7 +13,7 @@
 
 	var ns = window;
 
-	function History( options, plugin_count) {
+	function HistoryList( options, plugin_count) {
 		this.plugin_count = plugin_count;
 
 		this.options = $.extend({
@@ -21,11 +21,11 @@
 
 
             initValue: null, //Any item or list of items to initialize the list = first item
-            action   : function(/* item, history */){
+            action   : function(/* item, historyList */){
                          //function to be called when a item is poped from the list using goFirst, goBack, goForward or goLast
                      },
 
-            onUpdate : function(/*backwardAvail, forwardAvail, history*/){
+            onUpdate : function(/*backwardAvail, forwardAvail, historyList*/){
                           //Called when the list is updated.
                           //backwardAvail [BOOLEAN] true if it is possible to go backwards
                           //forwardAvail [BOOLEAN] true if it is possible to go forwards
@@ -52,10 +52,10 @@
 	}
 
     // expose access to the constructor
-    ns.History = History;
+    ns.HistoryList = HistoryList;
 
     //Extend the prototype
-	ns.History.prototype = {
+	ns.HistoryList.prototype = {
 
         add: function( item ){
             if (this.addToList){

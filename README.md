@@ -13,15 +13,15 @@ Maintains a stacked list allowing to add and remove items, and to go back and fo
 http://FCOO.github.io/history.js/demo/ 
 
 ## Usage
-```var myHistory = new History( options );```
+```var myHistory = new HistoryList( options );```
 
 
 ### options
 | Id | Type | Default | Description |
 | :--: | :--: | :-----: | --- |
 | `initValue`| [Object] or [][Object] | null | Any item or list of items to initialize the list |
-| `action` | `function(item, history)` | null | function to be called when a item added using `add` or popped from the list using `goFirst`, `goBack`, `goForward` or `goLast` |
-| `onUpdate` | `function(backwardAvail, forwardAvail, history)` | null | function to be called when the list is updated. `backwardAvail == true`if it is possible to go backwards. `forwardAvail == true`if it is possible to go forwards |
+| `action` | `function(item, historyList)` | null | function to be called when a item added using `add` or popped from the list using `goFirst`, `goBack`, `goForward` or `goLast` |
+| `onUpdate` | `function(backwardAvail, forwardAvail, historyList)` | null | function to be called when the list is updated. `backwardAvail == true`if it is possible to go backwards. `forwardAvail == true`if it is possible to go forwards |
 
 
 ### Methods

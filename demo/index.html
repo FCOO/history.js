@@ -23,7 +23,7 @@
             console.log(txt, 'index:'+theHistory.index, 'lastIndex:'+theHistory.lastIndex, 'list:'+theHistory.list);
         }
 
-        var myHistory = new History({
+        var myHistory = new HistoryList({
             action  : function onAdd(item, hist){
                         display('Action:"'+item+'"', hist);
                       },
