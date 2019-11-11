@@ -1,0 +1,26 @@
+{
+  "name": "history.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/FCOO/history.js",
+  "authors": "Niels Holt",
+  "description": "",
+  "main": "dist/history.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FCOO/history.js.git"
+  },
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "moduleType": [
+    "es6"
+  ]
+}
