@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                 "afterProdCmd" : "",     //Cmd to be run at the end of prod-task
                 "afterDevCmd"  : "",     //Cmd to be run at the end of dev-task
 
-                "DEBUG"        : false   //if true different debugging is on and the tempoary files are not deleted
+                "DEBUG"        : true   //if true different debugging is on and the tempoary files are not deleted
             }
         }
     });
