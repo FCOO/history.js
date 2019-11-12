@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="da" style="font-size: 100%">
+<head>
+	<title>fcoo.dk - history.js - Demo</title>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv='x-dns-prefetch-control' content='on'>
+
+	<meta name='copyright' content='FCOO'>
+	<meta name='owner' content='FCOO'>
+
+</head>
+
+<body>
+    See Console
+
+
+
+	<script src="bower_components.js"></script>
+	<script src="../src/history.js"></script>
+	<script>
+        function display( txt, theHistory ){
+            console.log(txt, 'index:'+theHistory.index, 'lastIndex:'+theHistory.lastIndex, 'list:'+theHistory.list);
+        }
+
+        var myHistory = new HistoryList({
+            action  : function onAdd(item, hist){
+                        display('Action:"'+item+'"', hist);
+                      },
+            onUpdate: function(backwardAvail, forwardAvail, hist){
+                          display('Update back:'+backwardAvail+' forward:'+forwardAvail, hist);
+                      },
+            initValue: ['0', '1', '2']
+        });
+
+        myHistory.console = function(txt){
+            console.log('************************************');
+            console.log(txt);
+            return this;
+        };
+
+        myHistory
+            .console('Add A')
+            .add('A')
+            .console('Add B')
+            .add('B')
+            .console('Add C')
+            .add('C')
+            .console('2 x Go Back')
+            .goBack()
+            .goBack()
+            .console('3 x Go Forward')
+            .goForward()
+            .goForward()
+            .goForward()
+            .console('3 x Go First')
+            .goFirst()
+            .goFirst()
+            .goFirst()
+            .console('3 x Go Last')
+            .goLast()
+            .goLast()
+            .goLast()
+            .console('Add D')
+            .add('D')
+            .console('Add E')
+            .add('E')
+            .console('Add F')
+            .add('F')
+            .console('2 x Go Back')
+            .goBack()
+            .goBack()
+            .console('Clear History')
+            .clearHistory()
+            .console('Clear Future')
+            .clearFuture()
+
+
+            .console('Add G')
+            .add('G')
+            .console('Add H')
+            .add('H')
+            .console('Add I')
+            .add('I')
+            .console('2 x Go Back')
+            .goBack()
+            .goBack()
+            .console('Clear Future')
+            .clearFuture()
+            .console('Clear History')
+            .clearHistory()
+
+	</script>
+</body>
+</html>
