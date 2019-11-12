@@ -1,13 +1,13 @@
 {
   "name": "history",
-  "version": "1.0.7",
-  "homepage": "https://github.com/FCOO/history",
+  "version": "1.0.8",
+  "homepage": "https://github.com/FCOO/history.js",
   "authors": "Niels Holt",
   "description": "",
   "main": "dist/history.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/FCOO/history.git"
+    "url": "git://github.com/FCOO/history.js.git"
   },
   "dependencies": {
     "jquery": "latest"
