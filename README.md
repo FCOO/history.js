@@ -22,6 +22,7 @@ http://FCOO.github.io/history.js/demo/
 | `initValue`| [Object] or [][Object] | null | Any item or list of items to initialize the list |
 | `action` | `function(item, historyList)` | null | function to be called when a item added using `add` or popped from the list using `goFirst`, `goBack`, `goForward` or `goLast` |
 | `onUpdate` | `function(backwardAvail, forwardAvail, historyList)` | null | function to be called when the list is updated. `backwardAvail == true`if it is possible to go backwards. `forwardAvail == true`if it is possible to go forwards |
+| `compare` | `function(item1, item2)` |  | Compare two items and return `true` if the two items are equal. Default compare items as `string` |
 
 
 ### Methods
